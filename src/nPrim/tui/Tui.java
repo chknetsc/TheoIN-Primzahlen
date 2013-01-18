@@ -12,12 +12,13 @@ public class Tui {
 	}
 	
 	public void instruction() {
-		System.out.println("N-ter Primzahlen Rechner");
+		System.out.println("N-ter Primzahlen Rechner\n");
 		System.out.println("Die wievielte Primzahl moechten Sie wissen?");
 		System.out.println("\t (vertägliches limit 10000)");
 	}
 	
 	public int input() {
+		System.out.print("Eingabe: ");
 		nteStelle = Integer.parseInt(scanner.next());
 		if(nteStelle >= 1) {
 			return nteStelle;
@@ -27,11 +28,24 @@ public class Tui {
 		}
 	}
 	
-	public void output(int primzahl) {
+	public void output(int nStelle, int primzahl) {
 		if(primzahl != -1) {
-			System.out.println("Die n-te Primzahl ist: " + primzahl);
+			System.out.println("\nDie " + nStelle + "-te Primzahl ist: " + primzahl);
 		} else {
-			System.out.println("Sorry, \ndie n-te Primzahl kann nicht berechnet werden.");
+			System.out.println("\nSorry, \ndie " + nStelle + "-te Primzahl kann nicht berechnet werden.");
+		}
+		System.out.println("\n---------------------------------------------------- \n");
+	}
+
+	public boolean weiter() {
+		System.out.print("Weitere Primzahlen berechnen ? (ja = j | nein = n ) : ");
+		if(scanner.next().equalsIgnoreCase("j")) {
+			System.out.println("\n---------------------------------------------------- \n");
+			return true;
+		} else {
+			System.out.println("\n---------------------------------------------------- \n");
+			System.out.println("Programm Beendet");
+			return false;
 		}
 	}
 

@@ -22,16 +22,15 @@ public class NPrimApp {
 		Tui tui = new Tui();
 		
 		
-		while(true) {
+		do {
 			tui.instruction();
 			nStelle = tui.input();
 		
 			if(nStelle != -1) {
 				int primzahl = primCalc.berechnePrimzahl(nStelle);
-				tui.output(primzahl);
+				tui.output(nStelle, primzahl);
 			}
-			
-		}
+		} while(tui.weiter());
 	}
 	
 	
