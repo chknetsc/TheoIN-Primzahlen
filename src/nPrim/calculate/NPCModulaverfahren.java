@@ -1,5 +1,6 @@
 package nPrim.calculate;
 
+
 public class NPCModulaverfahren implements InPrimCalculate {
 
 	public int berechnePrimzahl(int nStelle) {

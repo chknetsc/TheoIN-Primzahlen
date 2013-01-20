@@ -91,7 +91,7 @@ public class NPCArrayverfahren implements InPrimCalculate {
 		if(nStelle > 1229) {
 			return -1;
 		} else {
-			return primArray[(nStelle)];
+			return primArray[(nStelle-1)];
 		}
 	}
 
